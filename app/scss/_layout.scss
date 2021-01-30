@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+.parent-container {
+    background-color: white;
+    min-width: 800px;
+    min-height: 450px;
+    display: flex;
+    border-radius: 20px;
+    @include breakpoint-down("mobile") {
+        min-width: auto;
+        min-height: auto;
+        width: 80%;
+    }
+    @include breakpoint-down("desktop") {
+        flex-direction: column;
+    }
+    .left-side,
+    .right-side {
+        flex: 1;
+        @include breakpoint-down("desktop") {
+            flex: 0;
+        }
+        @include breakpoint-down("mobile") {
+            flex: 1;
+        }
+    }
+    .left-side {
+        position: relative;
+        @include breakpoint-down("mobile") {
+            top: -110px;
+            left: -5px;
+            flex: auto;
+            height: 70px;
+        }
+        @include breakpoint-up("desktop") {
+            background-image: url(/app/images/bg-pattern-desktop.svg);
+            background-position: -520px -250px;
+            background-repeat: no-repeat;
+            background-size: 800px;
+        }
+        &_women {
+            position: absolute;
+            width: 375px;
+            left: -95px;
+            top: 70px;
+            @include breakpoint-down("desktop") {
+                display: none;
+            }
+        }
+        &_women_mobile {
+            display: none;
+            @include breakpoint-down("mobile") {
+                // position: absolute;
+                display: block;
+            }
+        }
+        &_box {
+            position: absolute;
+            width: 150px;
+            left: -95px;
+            top: 175px;
+            @include breakpoint-down("desktop") {
+                display: none;
+            }
+        }
+    }
+    .right-side {
+        padding: 75px 7.5em 75px 0;
+        @include breakpoint-down("desktop") {
+            padding-left: 7.5em;
+        }
+        @include breakpoint-down("mobile") {
+            padding: 2em;
+        }
+        .header {
+            font-weight: $primary-font-weight;
+            font-size: 28px;
+            @include breakpoint-down("mobile") {
+                text-align: center;
+            }
+        }
+        > * {
+            padding: 0.625em 0;
+        }
+    }
+}

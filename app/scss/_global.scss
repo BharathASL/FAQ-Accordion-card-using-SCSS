@@ -1,0 +1,25 @@
+@import "variables";
+* {
+    font-family: $font;
+    color: $neutral-color-blue1;
+    font-weight: $secondary-font-weight;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+

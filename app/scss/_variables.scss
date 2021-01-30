@@ -1,0 +1,15 @@
+$mobile-screen: 375px;
+$desktop-screen: 1440px;
+//Colors
+$primary-color-blue: hsl(238, 29%, 16%);
+$primary-color-red: hsl(14, 88%, 65%);
+$neutral-color-blue1: hsl(237, 12%, 33%);
+$neutral-color-blue2: hsl(240, 6%, 50%);
+$gradient-color-violet: hsl(273, 75%, 66%);
+$gradient-color-blue: hsl(240, 73%, 65%);
+$divider-color: hsl(240, 5%, 91%);
+//Font
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+$font: "Kumbh Sans", sans-serif;
+$primary-font-weight: 700;
+$secondary-font-weight: 300;
